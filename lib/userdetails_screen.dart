@@ -334,7 +334,7 @@ class UserDetailsScreen extends StatelessWidget {
                       children: [
                         Container(
                           width: 358.0,
-                          height: 145.0,
+                          height: 160.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             boxShadow: [

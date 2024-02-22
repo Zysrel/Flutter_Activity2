@@ -70,7 +70,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'User List App',
+      title: 'user-list',
       home: UserListScreen(),
     );
   }
@@ -109,9 +109,9 @@ class _UserListScreenState extends State<UserListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'User List',
+          'List of Users',
           style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 25.0),
+              fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
         ),
       ),
       body: SingleChildScrollView(
