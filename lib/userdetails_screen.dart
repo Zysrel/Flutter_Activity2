@@ -28,7 +28,7 @@ class UserDetailsScreen extends StatelessWidget {
                       icon: const Icon(Icons.chevron_left_sharp),
                     ),
                     const Text(
-                      'User Details',
+                      'Personal Information',
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
@@ -41,11 +41,15 @@ class UserDetailsScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(
-                      color: const Color.fromARGB(71, 158, 158, 158),
-                      width: 2.0,
-                    ),
                     borderRadius: BorderRadius.circular(15.0),
+                     boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), 
+                      ),
+                    ],
                   ),
                   child: Center(
                     child: Column(
@@ -71,7 +75,7 @@ class UserDetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                //Starting of the Users Details
+//Starting of the Users Details
                 const SizedBox(height: 10.0),
                 Column(
                   children: [
@@ -79,16 +83,20 @@ class UserDetailsScreen extends StatelessWidget {
                       children: [
                         Container(
                           width: 180,
-                          height: 160,
+                          height: 180,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(
-                              color: const Color.fromARGB(71, 158, 158, 158),
-                              width: 2.0,
-                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3), 
+                              ),
+                            ],
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          //users info
+  //users info
                           child: Container(
                             margin: const EdgeInsets.all(15.0),
                             child: Align(
@@ -96,15 +104,20 @@ class UserDetailsScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Account Details',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 15.0,
-                                        color: Color.fromARGB(255, 3, 17, 95),
-                                      ),
-                                    ),
+                                  const Row(
+                                    children: [
+                                      Icon(Icons.account_box, color: Colors.blue,),
+                                      SizedBox(width: 8.0,),
+                                         Text(
+                                          'Account',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15.0,
+                                            color: Color.fromARGB(255, 3, 17, 95),
+                                          ),
+                                        ),
+                                      
+                                    ],
                                   ),
                                   const SizedBox(height: 8),
                                   Text(
@@ -123,35 +136,45 @@ class UserDetailsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        // Address Container
+// Address Container
                         const SizedBox(width: 5),
                         Container(
                           width: 175,
-                          height: 160,
+                          height: 180,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(
-                              color: const Color.fromARGB(71, 158, 158, 158),
-                              width: 2.0,
-                            ),
                             borderRadius: BorderRadius.circular(15.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3), 
+                              ),
+                            ],
                           ),
                           child: Container(
                             margin: const EdgeInsets.all(15.0),
                             child: Align(
-                              alignment: Alignment.centerLeft,
+                              alignment: Alignment.center,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Address Details',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 15.0,
-                                        color: Color.fromARGB(255, 3, 17, 95),
+                                  const Row(
+                                    children: [
+                                      Icon(Icons.location_on, color: Color.fromARGB(255, 3, 136, 245)),
+                                      SizedBox(
+                                        width: 8.0
                                       ),
-                                    ),
+                                         Text(
+                                          'Address',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15.0,
+                                            color: Color.fromARGB(255, 3, 17, 95),
+                                          ),
+                                        ),
+                                    ],
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
@@ -185,23 +208,27 @@ class UserDetailsScreen extends StatelessWidget {
                       ],
                     ),
 
-                    const SizedBox(height: 10.0), // Add spacing between rows
+                    const SizedBox(height: 5.0),
                     Row(
                       children: [
                         Container(
-                          height: 160,
+                          height: 180,
                           width: 180,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(
-                              color: const Color.fromARGB(71, 158, 158, 158),
-                              width: 2.0,
-                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3), 
+                              ),
+                            ],
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          //Geo Container
+//Geo Container
                           child: Container(
-                            height: 170,
+                            height: 180,
                             width: 175,
                             margin: const EdgeInsets.all(15.0),
                             child: Align(
@@ -209,15 +236,21 @@ class UserDetailsScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Geography Details',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 15.0,
-                                        color: Color.fromARGB(255, 3, 17, 95),
+                                  const Row(
+                                    children: [
+                                       Icon(Icons.public, color: Color.fromARGB(255, 3, 136, 245)),
+                                       SizedBox(
+                                        width: 8.0,
                                       ),
-                                    ),
+                                        Text(
+                                          'Geography',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15.0,
+                                            color: Color.fromARGB(255, 3, 17, 95),
+                                          ),
+                                        ),
+                                    ],
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
@@ -236,17 +269,21 @@ class UserDetailsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        // Contact Info Container
+// Contact Info Container
                         const SizedBox(width: 5),
                         Container(
                           width: 175,
-                          height: 170,
+                          height: 180,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(
-                              color: const Color.fromARGB(71, 158, 158, 158),
-                              width: 2.0,
-                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3), 
+                              ),
+                            ],
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: Container(
@@ -256,15 +293,21 @@ class UserDetailsScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Contact Details',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 15.0,
-                                        color: Color.fromARGB(255, 3, 17, 95),
+                                  const Row(
+                                    children: [
+                                       Icon(Icons.phone, color: Color.fromARGB(255, 3, 136, 245)),
+                                       SizedBox(
+                                        width: 8.0,
                                       ),
-                                    ),
+                                         Text(
+                                          'Contacts',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15.0,
+                                            color: Color.fromARGB(255, 3, 17, 95),
+                                          ),
+                                        ),
+                                    ],
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
@@ -286,20 +329,25 @@ class UserDetailsScreen extends StatelessWidget {
                       ],
                     ),
 
-                    const SizedBox(height: 10.0), // Add spacing between rows
+                    const SizedBox(height: 5.0), 
                     Row(
                       children: [
                         Container(
-                          width: 358,
+                          width: 358.0,
+                          height: 145.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(
-                              color: const Color.fromARGB(71, 158, 158, 158),
-                              width: 2.0,
-                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3), 
+                              ),
+                            ],
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          //Company Container
+//Company Container
                           child: Container(
                             margin: const EdgeInsets.all(15.0),
                             child: Align(
@@ -307,15 +355,21 @@ class UserDetailsScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Company Details',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 15.0,
-                                        color: Color.fromARGB(255, 3, 17, 95),
+                                  const Row(
+                                    children: [
+                                       Icon(Icons.business_sharp, color: Color.fromARGB(255, 3, 136, 245)),
+                                       SizedBox(
+                                        width: 8.0,
                                       ),
-                                    ),
+                                       Text(
+                                          'Company Details',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15.0,
+                                            color: Color.fromARGB(255, 3, 17, 95),
+                                          ),
+                                        ),
+                                    ],
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
@@ -326,12 +380,6 @@ class UserDetailsScreen extends StatelessWidget {
                                   const SizedBox(height: 5),
                                   Text(
                                     'Catch Phrase: ${user.catchphrase}',
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Text(
-                                    'Business: ${user.bs}',
                                     style: const TextStyle(
                                         fontWeight: FontWeight.w600),
                                   ),

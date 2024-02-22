@@ -137,10 +137,14 @@ class _UserListScreenState extends State<UserListScreen> {
                       margin: const EdgeInsets.all(2.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(
-                          color: const Color.fromARGB(71, 158, 158, 158),
-                          width: 2.0,
-                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: const Offset(0, 3), 
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       child: ListTile(
