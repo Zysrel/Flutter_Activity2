@@ -335,6 +335,12 @@ class UserDetailsScreen extends StatelessWidget {
                                     style: const TextStyle(
                                         fontWeight: FontWeight.w600),
                                   ),
+                                  const SizedBox(height: 5),
+                                  Text(
+                                    'Business: ${user.bs}',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.w600),
+                                  ),
                                 ],
                               ),
                             ),
