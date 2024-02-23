@@ -96,7 +96,7 @@ class UserDetailsScreen extends StatelessWidget {
                             ],
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-  //users info
+//users info
                           child: Container(
                             margin: const EdgeInsets.all(15.0),
                             child: Align(
@@ -106,14 +106,14 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                      Icon(Icons.account_box, color: Colors.blue,),
+                                      Icon(Icons.account_box, color: Color.fromARGB(255, 2, 89, 160),),
                                       SizedBox(width: 8.0,),
                                          Text(
                                           'Account',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w900,
                                             fontSize: 15.0,
-                                            color: Color.fromARGB(255, 3, 17, 95),
+                                            color: Color.fromARGB(255, 9, 23, 103),
                                           ),
                                         ),
                                       
@@ -162,7 +162,7 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                      Icon(Icons.location_on, color: Color.fromARGB(255, 3, 136, 245)),
+                                      Icon(Icons.location_on, color: Color.fromARGB(255, 171, 13, 2)),
                                       SizedBox(
                                         width: 8.0
                                       ),
@@ -238,7 +238,7 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                       Icon(Icons.public, color: Color.fromARGB(255, 3, 136, 245)),
+                                       Icon(Icons.public, color: Color.fromARGB(255, 3, 123, 7)),
                                        SizedBox(
                                         width: 8.0,
                                       ),
@@ -295,7 +295,7 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                       Icon(Icons.phone, color: Color.fromARGB(255, 3, 136, 245)),
+                                       Icon(Icons.phone, color: Color.fromARGB(255, 1, 52, 81)),
                                        SizedBox(
                                         width: 8.0,
                                       ),
@@ -357,7 +357,7 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                       Icon(Icons.business_sharp, color: Color.fromARGB(255, 3, 136, 245)),
+                                       Icon(Icons.apartment_rounded, color: Color.fromARGB(255, 2, 23, 208)),
                                        SizedBox(
                                         width: 8.0,
                                       ),
@@ -366,7 +366,7 @@ class UserDetailsScreen extends StatelessWidget {
                                           style: TextStyle(
                                             fontWeight: FontWeight.w900,
                                             fontSize: 15.0,
-                                            color: Color.fromARGB(255, 3, 17, 95),
+                                            color: Color.fromARGB(255, 28, 3, 95),
                                           ),
                                         ),
                                     ],
