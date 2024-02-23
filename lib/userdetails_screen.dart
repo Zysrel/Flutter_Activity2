@@ -106,7 +106,7 @@ class UserDetailsScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                      Icon(Icons.account_box, color: Color.fromARGB(255, 2, 89, 160),),
+                                      Icon(Icons.assignment_ind, color: Color.fromARGB(255, 2, 89, 160),),
                                       SizedBox(width: 8.0,),
                                          Text(
                                           'Account',
@@ -243,7 +243,7 @@ class UserDetailsScreen extends StatelessWidget {
                                         width: 8.0,
                                       ),
                                         Text(
-                                          'Geography',
+                                          'Geographic',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w900,
                                             fontSize: 15.0,
