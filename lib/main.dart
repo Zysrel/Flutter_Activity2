@@ -94,7 +94,7 @@ class _UserListScreenState extends State<UserListScreen> {
 
   Future<List<User>> fetchUsers() async {
     final response =
-        await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
+        await http.get(Uri.parse('http://10.0.2.2:3001/user'));
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
@@ -110,8 +110,6 @@ class _UserListScreenState extends State<UserListScreen> {
       appBar: AppBar(
         title: const Text(
           'List of Users',
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.blue, fontSize: 20.0),
         ),
       ),
       body: SingleChildScrollView(
@@ -135,36 +133,19 @@ class _UserListScreenState extends State<UserListScreen> {
                         left: 18.0, right: 18.0, bottom: 5.0),
                     child: Container(
                       margin: const EdgeInsets.all(2.0),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: const Offset(0, 3), 
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
                       child: ListTile(
                         leading: const Icon(
                           Icons.account_circle_sharp,
                           size: 40.0,
-                          color: Colors.grey,
                         ),
                         title: Text(
                           currentUser.name,
-                          style: const TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
                           currentUser.email,
-                          style: const TextStyle(
-                              fontSize: 12.0, fontWeight: FontWeight.w600),
                         ),
                         trailing: IconButton(
-                          icon: const Icon(Icons.info, color: Colors.blue),
+                          icon: const Icon(Icons.info),
                           onPressed: () {
                             Navigator.push(
                               context,
