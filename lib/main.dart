@@ -94,7 +94,7 @@ class _UserListScreenState extends State<UserListScreen> {
 
   Future<List<User>> fetchUsers() async {
     final response =
-        await http.get(Uri.parse('http://10.0.2.2:3001/user'));
+        await http.get(Uri.parse('http://192.168.1.9:3001/faker'));
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
